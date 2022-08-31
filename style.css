@@ -1,0 +1,268 @@
+@import url('https://fonts.googleapis.com/css2?family=Mukta&family=Roboto+Mono&display=swap');
+
+/* Reset */
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+/* HTML e Body */
+
+html {
+    font-family: 'Mukta', sans-serif;
+}
+
+body {
+    background: #f0f0f0;
+}
+
+/* Estruturas */
+
+#flex-body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Grid Layout */
+
+.structure {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-areas:
+    "add-forms interface"
+    "relation-form interface";
+    width: 95vw;
+    min-height: 95vh;
+    grid-gap: 10px;
+    padding: 10px;
+    background: white;
+    border-radius: 5px;
+}
+
+.add-forms {
+    grid-area: add-forms;
+    background: #fcf9d8;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.interface {
+    grid-area: interface;
+    background: #e9d7a9;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.relations {
+    grid-area: relation-form;
+    background: #edebc9;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.relation-div {
+    min-height: 100px;
+}
+
+/* Formulários (Pessoa, Produto, Relação) */
+
+#name-form {
+    background: rgb(0,0,0,0.1);
+    position: relative;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+#food-form {
+    background: rgb(0,0,0,0.1);
+    position: relative;
+    border-radius: 5px;
+}
+
+#nameSubmit, #foodSubmit {
+    position: absolute;
+    right: 30px;
+    top: 10px;
+}
+
+form {
+    padding: 10px;
+}
+
+.interface ul {
+    padding: 10px;
+}
+
+.pedidos {
+    padding: 10px;
+    max-height: 470px;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    -ms-overflow-style: -ms-autohiding-scrollbar;
+    border-radius: 5px;
+}
+
+ul li {
+    list-style: none;
+}
+
+.productRequestNumber {
+    width: 30px;
+    overflow: hidden;
+    text-align: center;
+}
+.productRequestNumber::-webkit-outer-spin-button, .productRequestNumber::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Lista de Produtos */
+
+.foods {
+    padding: 10px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 220px));
+    grid-gap: 10px;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    -ms-overflow-style: -ms-autohiding-scrollbar;
+    height: 85px;
+    max-height: 85px;
+    background: rgb(0,0,0,0.1);
+    border-radius: 5px;
+}
+
+/* Lista de Clientes */
+
+.clients {
+    padding: 10px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 100px);
+    grid-gap: 10px;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    -ms-overflow-style: -ms-autohiding-scrollbar;
+    height: 85px;
+    max-height: 85px;
+    background: rgb(0,0,0,0.1);
+    border-radius: 5px;
+}
+
+#foodName {
+    margin-right: 30px;
+}
+
+/* Botões */
+
+.btn-div {
+    width: 100px;
+    margin: auto;
+}
+
+.btn-div2 {
+    max-width: 300px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.clear-btn {
+    width: 120px;
+    height: 30px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: red;
+    color: white;
+}
+
+.clear-btn:hover {
+    background: rgb(0,0,0,0.2)
+}
+
+.btn-div2 button {
+    margin-top: 10px;
+}
+
+#relationSubmit {
+    margin-top: 10px;
+    width: 100px;
+}
+
+.submit-btn {
+    width: 80px;
+    height: 30px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.submit-btn:hover {
+    background: rgb(0,0,0,0.2)
+}
+
+#calcularBtn {
+    width: 100px;
+}
+
+.text-center {
+    text-align: center;
+}
+
+/* Lista de pedidos */
+
+.pedidos {
+    background: rgb(0,0,0,0.1);
+    min-height: 500px;
+    height: 500px;
+}
+
+
+.pedido-info {
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    grid-template-areas: "list value"
+}
+
+.food-lists {
+    grid-area: list
+}
+
+.payments {
+    grid-area: value;
+    display: flex;
+    justify-content: center;
+}
+
+.payment {
+    color: white;
+    background: rgb(0,0,0,0.2);
+    padding: 10px;
+    border-radius: 5px;
+    max-height: 45px;
+}
+
+.pedido-header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.tax-div {
+    margin-right: 30px;
+}
+
+.pedido-info {
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgb(0,0,0,0.1)
+}
+
+.clientProduct-header {
+    display: flex;
+    justify-content: space-between;
+    margin: 5px 0px 5px 0px;
+}

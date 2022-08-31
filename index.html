@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Divisor de Contas</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div id="flex-body">
+        <div class="structure">
+            <div class="add-forms">
+                <h2>Adicionar Pessoa</h2>
+                <form id="name-form" method="post">
+                    <label for="name">Nome</label>
+                    <input type="text" id="name" name="name" required autocomplete="off" placeholder="Nome da pessoa">
+                    <input type="submit" id="nameSubmit" class="submit-btn" value="Adicionar">
+                </form>
+                <h2>Adicionar Produto</h2>
+                <form id="food-form">
+                    <label for="foodName">Produto</label>
+                    <input type="text" id="foodName" name="foodName" required placeholder="Nome do produto">
+                    <label for="foodPrice">Preço R$</label>
+                    <input type="number" id="foodPrice" name="foodPrice" required placeholder="Preço do produto">
+                    <input type="submit" id="foodSubmit" class="submit-btn" value="Adicionar">
+                </form>
+            </div>
+            <div class="relations">
+                <h2>Fazer Pedido</h2>
+                <form id="relation-form">
+                    <label for="payment-option">Tipo de pedido</label>
+                    <select id="payment-option">
+                        <option value="Individual" selected>Individual</option>
+                        <option value="Compartilhado">Compartilhado</option>
+                    </select>
+                    <div class="relation-div">
+                        <div class="clientProduct-header">
+                            <h3>Clientes</h3>
+                            <button type="button" id="clearClients" class="clear-btn">Limpar Clientes</button>
+                        </div>
+                        <div class="clients"></div>
+                    </div>
+                    <div class="relation-div">
+                        <div class="clientProduct-header">
+                            <h3>Produtos</h3>
+                            <button type="button" id="clearFoods" class="clear-btn">Limpar Produtos</button>
+                        </div>
+                        <div class="foods"></div>
+                    </div>
+                    <div class="btn-div">
+                        <input type="submit" id="relationSubmit" class="submit-btn" value="Fazer pedido">
+                    </div>
+                </form>
+            </div>
+            <div class="interface">
+                <h2 class="text-center">Pedidos</h2>
+                <div class="pedidos"></div>
+                <div class="btn-div2">
+                    <button type="button" id="calcularBtn" class="submit-btn">Calcular</button>
+                    <button type="button" id="clearInterface" class="clear-btn">Limpar Pedidos</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./script.js"></script>
+</body>
+</html>
